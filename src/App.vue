@@ -1,6 +1,8 @@
 <template>
   <div >
   <navbar_homepage />
+  <Carousel_homepage />
+  <Toptrending_homepang />
   <div >
     <router-view />
   </div>
@@ -9,6 +11,9 @@
 
 <script setup>
 import navbar_homepage from './components/navbar_homepage.vue';
+import Carousel_homepage from './components/Carousel_homepage.vue';
+import Toptrending_homepang from './components/Toptrending_homepang.vue';
+
 </script>
 
 <style lang="scss" scoped>

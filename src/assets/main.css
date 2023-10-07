@@ -2,5 +2,11 @@
 
 * {
     font-family: 'Kanit', sans-serif;
-   
+    
+}
+
+
+.carousel-inner{
+    height: 100%;
+    object-fit: cover;
 }
