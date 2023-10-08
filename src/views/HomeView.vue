@@ -1,4 +1,5 @@
 <template>
+  <br>
      <div id="hero-carousel" class="carousel slide">
         <div class="carousel-indicators">
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -7,7 +8,7 @@
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner card-img-top mx-auto">
     <div class="carousel-item active">
       <img src="https://travel.mthai.com/app/uploads/2017/05/6-5.jpg" class="d-block w-100 " alt="Slide 1">
     </div>
@@ -34,6 +35,7 @@
   </button>
   
 </div>
+<br>
   <div>
     <h1>
        Trending 
@@ -48,19 +50,36 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <tr v-for="i in 10" :key="i">
-      <th scope="row">{{ i++ }}</th>
-      <td><img src=""></td>
-      <td>Otto</td>
-    
-    </tr>
-  </tbody>
+  <tr v-for="(item, index) in list.slice(0, 10)" :key="index">
+    <th scope="row">{{ index + 1 }}</th>
+    <td><img :src=item.image class="card-img-top mx-auto" style="width: 12rem; height: 12rem;"></td>
+    <td>{{item.price}} บาท</td>
+  </tr>
+</tbody>
 </table>
+
   </div>
+  <div class="card-group">
+<div class="col mb-4 mx-2" v-for="(i, index) in list" :key="index">
+  <div class="card" style="width: 19rem;" >
+    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 12rem; height: 12rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ i.title }}</h5>
+    <p class="card-text">{{ i.description }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>  
+</div>  
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+import { useArt_listStore } from '@/stores/counter.js';
+
+const all_Art = useArt_listStore();
+const list = ref(all_Art.Art_list);
 
 </script>
 
