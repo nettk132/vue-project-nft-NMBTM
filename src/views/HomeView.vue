@@ -1,19 +1,5 @@
 <template>
-  
-<ul class="nav mx-5 w-50">
- <li class="nav-item">
-   <routerLink to="/" class="nav-link active" aria-current="page" >ALL</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/ArtView" class="nav-link" >ART</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/GameView" class="nav-link" >game</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/PhotographyView" class="nav-link ">photography</routerLink>
- </li>
-</ul>
+
   <br>
      <div id="hero-carousel" class="carousel slide">
         <div class="carousel-indicators">
@@ -52,9 +38,10 @@
 </div>
 <br>
   <div>
-    <h1>
+    <h1 style="color: #f39f5a">
        Trending 
     </h1>
+    <br>
    <table class="table">
   <thead>
     <tr>
@@ -67,19 +54,19 @@
   <tbody class="table-group-divider">
   <tr v-for="(item, index) in list.slice(0, 10)" :key="index">
     <th scope="row">{{ index + 1 }}</th>
-    <td><img :src=item.image class="card-img-top mx-auto" style="width: 12rem; height: 12rem;"></td>
+    <td><img :src=item.image class="card-img-top mx-auto" style="width: 18.5rem; height: 18.5rem;"></td>
     <td>{{item.price}} บาท</td>
   </tr>
 </tbody>
 </table>
 <br>
-<h1>Art</h1>
+<h1 style="color: #f39f5a">Art</h1>
 <br>
   </div>
   <div class="card-group">
 <div class="col mb-4 mx-2" v-for="(i, index) in list.slice(0, 4)" :key="index">
   <div class="card" style="width: 19rem;" >
-    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 12rem; height: 12rem;" >
+    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 18.5rem; height: 18.5rem;" >
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
@@ -92,13 +79,13 @@
 </div>
 
 <br>
-<h1>Game</h1>
+<h1 style="color: #f39f5a">Game</h1>
 <br>
 
 <div class="card-group">
 <div class="col mb-4 mx-2" v-for="(i, index) in list_game.slice(0, 4)" :key="index">
   <div class="card" style="width: 19rem;" >
-    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 12rem; height: 12rem;" >
+    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 18.5rem; height: 18.5rem;" >
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
@@ -111,13 +98,13 @@
 </div>
 
 <br>
-<h1>Photography</h1>
+<h1 style="color: #f39f5a">Photography</h1>
 <br>
 
 <div class="card-group">
 <div class="col mb-4 mx-2" v-for="(i, index) in list_Photography.slice(0, 4)" :key="index">
   <div class="card" style="width: 19rem;" >
-    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 12rem; height: 12rem;" >
+    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 18.5rem; height: 18.5rem;" >
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
@@ -152,6 +139,72 @@ const all_Photography = usePhotography_listStore();
 const list_Photography = ref(all_Photography.Photography_list);
 </script>
 
+
 <style lang="scss" scoped>
+.card-group {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.card {
+width: 19rem;
+margin-bottom: 20px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border: 1px solid #e8bcb9;
+border-radius: 5px;
+}
+
+.card:hover {
+transform: translateY(-5px);
+transition: transform 0.3s ease;
+box-shadow: 0px 15px 25px #1d1a39;
+; 
+}
+
+.card img {
+max-height: 200px;
+object-fit: cover;
+}
+
+.card-body {
+padding: 15px;
+background-color:#e8bcb9;
+}
+
+.card-title {
+font-size: 1.25rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.card-text {
+font-size: 1rem;
+color: #555;
+}
+
+.btn-primary {
+background-color: #ae445a;
+color: #fff;
+border: none;
+}
+
+.btn-primary:hover {
+background-color: #662549;
+}
+
+.btn-success {
+background-color: #0f969c;
+color: #fff;
+border: none;
+}
+
+.btn-success:hover {
+background-color: #0c7075;
+}
+
+.container {
+padding: 20px;
+}
 
 </style>

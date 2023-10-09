@@ -18,6 +18,6 @@ import navbar_homepage from './components/navbar_homepage.vue';
 <style lang="scss" scoped>
 .body {
   background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242,108,108,1) 100%);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(253, 253, 253) 100%);
 }
 </style>
