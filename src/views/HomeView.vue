@@ -41,7 +41,6 @@
     <h1 style="color: #f39f5a">
        Trending 
     </h1>
-    <br>
    <table class="table">
   <thead>
     <tr>

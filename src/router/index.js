@@ -31,7 +31,7 @@ const router = createRouter({
       component: PhotographyView
     },
     {
-      path: '/Product_Vue',
+      path: '/Product_Vue/:id',
       name: 'Product_Vue',
       component: Product_Vue
     },
@@ -41,16 +41,17 @@ const router = createRouter({
       component: cart_vue
     },
     {
-      path: '/Product_Game',
+      path: '/Product_Game/:id',
       name: 'Product_Game',
       component: Product_Game
     },
     {
-      path: '/Product_Photpgraphy',
+      path: '/Product_Photpgraphy/:id',
       name: 'Product_Photpgraphy',
       component: Product_Photpgraphy
     },
   ]
+
 })
 
 export default router
