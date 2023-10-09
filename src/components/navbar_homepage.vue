@@ -24,21 +24,7 @@
  </div>
  
 </nav>
-<br>
-<ul class="nav mx-5 w-50">
- <li class="nav-item">
-   <routerLink to="/" class="nav-link active" aria-current="page" href="#">ALL</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/ArtView" class="nav-link" href="#">ART</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/GameView" class="nav-link" href="#">game</routerLink>
- </li>
- <li class="nav-item">
-   <routerLink to="/PhotographyView" class="nav-link ">photography</routerLink>
- </li>
-</ul>
+
 
 </template>
 
