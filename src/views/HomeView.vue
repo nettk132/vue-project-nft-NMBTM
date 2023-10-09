@@ -60,17 +60,21 @@
 
   </div>
   <div class="card-group">
-<div class="col mb-4 mx-2" v-for="(i, index) in list" :key="index">
+<div class="col mb-4 mx-2" v-for="(i, index) in list.slice(0, 4)" :key="index">
   <div class="card" style="width: 19rem;" >
-    <img :src="i.image" class="card-img-top mx-auto" alt="" style="width: 12rem; height: 12rem;">
+    <img :src="i.image" class="card-img-top " alt="" >
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <routerLink :to="`/Product_Vue/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
+    <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+
   </div>
 </div>
 </div>  
-</div>  
+</div>
+
+
 </template>
 
 <script setup>
