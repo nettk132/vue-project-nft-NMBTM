@@ -300,11 +300,11 @@ export const usePhotography_listStore = defineStore('Photography_list', () => {
         },
         {
             id: 'pro3',
-            title: 'Golden texture',
-            Owned_by: 'Abstract the studio',
-            price: 855.63,
-            description: 'Freehand oil painting. Oil on canvas. Brushstrokes of paint. modern Art. Prints, wallpapers, posters, cards, murals, rugs, hangings, prints',
-            image: 'https://www.shutterstock.com/image-vector/abstract-art-print-golden-texture-freehand-2301397531',
+            title: 'Your own value',
+            Owned_by: 'M. Scott Peck',
+            price: 862,
+            description: 'Until you value yourself, you will not value your time.',
+            image: 'https://i.pinimg.com/564x/a9/fa/08/a9fa0836ac7edb7b707a0306e805b439.jpg',
             category: 'Pro'
         },
         {
