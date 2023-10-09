@@ -15,7 +15,7 @@
        <button class="btn btn-outline-success" type="submit">Search  <i class="fas fa-search"></i></button>
        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
        <li class="nav-item">
-         <routerLink to="/cart" class="nav-link" aria-current="page"><i class="fa-solid fa-cart-shopping"></i></routerLink>
+         <routerLink to="/cart_vue" class="nav-link" aria-current="page"><i class="fa-solid fa-cart-shopping"></i></routerLink>
        </li>
      </ul>
      </form>
