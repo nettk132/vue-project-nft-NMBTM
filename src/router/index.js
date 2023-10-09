@@ -5,6 +5,8 @@ import GameView from '../views/GameView.vue'
 import PhotographyView from '../views/PhotographyView.vue'
 import Product_Vue from '../views/Product_Vue.vue'
 import cart_vue from '../views/Cart_Vue.vue'
+import Product_Game from '../views/Product_Game.vue'
+import Product_Photpgraphy from '../views/Product_Photpgraphy.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -37,6 +39,16 @@ const router = createRouter({
       path: '/cart_vue',
       name: 'cart_vue',
       component: cart_vue
+    },
+    {
+      path: '/Product_Game',
+      name: 'Product_Game',
+      component: Product_Game
+    },
+    {
+      path: '/Product_Photpgraphy',
+      name: 'Product_Photpgraphy',
+      component: Product_Photpgraphy
     },
   ]
 })
