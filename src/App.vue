@@ -5,12 +5,15 @@
     <router-view />
   </div>
 </div>
+<div>
+  <Footer_homepage />
+</div>
 </template>
 
 <script setup>
 import navbar_homepage from './components/navbar_homepage.vue';
 
-
+import Footer_homepage from './components/Footer_homepage.vue';
 
 
 </script>
