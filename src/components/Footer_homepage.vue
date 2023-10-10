@@ -46,7 +46,7 @@
             <i class="fas fa-gem me-3"></i>NMBTM
           </h6>
           <p>
-            stand for Net Mark Bas Tum Milk 
+            stand for Net Mark Bas Tum Milk We will rebuild a new one full of cryptocurrency.
           </p>
         </div>
         <!-- Grid column -->
@@ -57,17 +57,16 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Products
           </h6>
+          
+          
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="#!" class="nav-link">Vue</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a href="#!" class="nav-link">HTML</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a href="#!" class="nav-link">Javascript</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -76,19 +75,22 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            member
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#!" class="nav-link">Aphiched</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="#!" class="nav-link">Jirawat</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" class="nav-link">Nattaya</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="#!" class="nav-link">Sirawit</a>
+          </p>
+          <p>
+            <a href="#!" class="nav-link">Mark</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -97,13 +99,13 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p><i class="fas fa-home me-3"></i> Maejo University, Chiang Mai, TH</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            Nettk1322@gmail.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i class="fas fa-phone me-3"></i>0808459527</p>
+          
         </div>
         <!-- Grid column -->
       </div>
@@ -112,12 +114,7 @@
   </section>
   <!-- Section: Links  -->
 
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
+  
 </footer>
 <!-- Footer -->
 </template>

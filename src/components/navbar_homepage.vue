@@ -14,13 +14,13 @@
           <routerLink to="/" class="nav-link active" aria-current="page" href="#">ALL</routerLink>
        </li>
         <li class="nav-item">
-          <routerLink to="/ArtView" class="nav-link" href="#">ART</routerLink>
+          <routerLink to="/ArtView" class="nav-link text-reset" href="#">ART</routerLink>
        </li>
         <li class="nav-item">
-          <routerLink to="/GameView" class="nav-link" href="#">game</routerLink>
+          <routerLink to="/GameView" class="nav-link text-reset" href="#">game</routerLink>
        </li>
        <li class="nav-item">
-          <routerLink to="/PhotographyView" class="nav-link ">photography</routerLink>
+          <routerLink to="/PhotographyView" class="nav-link text-reset">photography</routerLink>
        </li>
       </ul>
 
