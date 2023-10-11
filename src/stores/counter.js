@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useArt_listStore = defineStore('Art', () => {
 
+    
 const Art_list  = ref([
   {
     id: 'art1',
@@ -219,11 +220,18 @@ const Art_list  = ref([
     image: 'https://www.shutterstock.com/shutterstock/photos/2226852425/display_1500/stock-vector-vector-art-illustration-cyber-cat-2226852425.jpg',
     category: 'Art'
 },
+
+
+
 ])
 return { Art_list }
 })
 
 export const useGame_listStore = defineStore('Game_list', () => {
+   
+    
+    
+    
     const Game_list = ref([
         {
             id: 'game1',
@@ -460,6 +468,8 @@ export const useGame_listStore = defineStore('Game_list', () => {
 })
 
 export const usePhotography_listStore = defineStore('Photography_list', () => {
+    
+    
     const Photography_list = ref([
         {
             id: 'photo1',
@@ -658,3 +668,4 @@ export const usePhotography_listStore = defineStore('Photography_list', () => {
 
     return { Photography_list }
 })
+

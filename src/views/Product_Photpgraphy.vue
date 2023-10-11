@@ -1,14 +1,14 @@
 <template>
     <div class="row mt-3">
         <div class="col-md-6">
-            <img :src="Product_Game.image" alt="" class="img-fluid">
+            <img :src="product_Photography.image" alt="" class="img-fluid">
         </div>
             <div class="col-md-6">
-                <h1>{{ Product_Game.title }}</h1>
+                <h1>{{ product_Photography.title }}</h1>
                 <p>
-                   {{ Product_Game.description }}
+                   {{ product_Photography.description }}
                 </p>
-                <h4>ราคา {{Product_Game.price}} บาท</h4>
+                <h4>ราคา {{product_Photography.price}} บาท</h4>
             
             <div class="d-flex mt-3">
                 
@@ -34,7 +34,7 @@ const route = useRoute()
 
 console.log(route.params.id)
 
-const Product_Game = computed(() => {
+const product_Photography = computed(() => {
   return list.value.find(item => item.id === route.params.id)
 })
 </script>
