@@ -8,6 +8,7 @@
                 <p>
                    {{ product_Photography.description }}
                 </p>
+                <h6>Owned_by {{ product_Photography.Owned_by }}</h6>
                 <h4>ราคา {{product_Photography.price}} บาท</h4>
             
             <div class="d-flex mt-3">

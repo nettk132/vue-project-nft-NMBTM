@@ -121,6 +121,7 @@
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
+
     <routerLink :to="`/Product_Photpgraphy/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
     <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
 

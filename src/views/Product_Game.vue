@@ -8,6 +8,7 @@
                 <p>
                    {{ Product_Game.description }}
                 </p>
+                <h6>Owned_by {{ Product_Game.Owned_by }}</h6>
                 <h4>ราคา {{Product_Game.price}} บาท</h4>
             
             <div class="d-flex mt-3">
