@@ -1,5 +1,19 @@
 <template>
-
+  <br>
+<ul class="nav mx-5 w-50">
+    <li class="nav-item">
+      <routerLink to="/" class="nav-link active" aria-current="page" style="text-decoration: underline">ALL</routerLink>
+    </li>
+    <li class="nav-item">
+      <routerLink to="/ArtView" class="nav-link">ART</routerLink>
+    </li>
+    <li class="nav-item">
+      <routerLink to="/GameView" class="nav-link">GAME</routerLink>
+    </li>
+    <li class="nav-item">
+      <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
+    </li>
+  </ul>
   <br>
      <div id="hero-carousel" class="carousel slide">
         <div class="carousel-indicators">

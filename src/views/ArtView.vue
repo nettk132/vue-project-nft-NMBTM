@@ -1,4 +1,19 @@
 <template>
+  <br>
+  <ul class="nav mx-5 w-50">
+ <li class="nav-item">
+   <routerLink to="/" class="nav-link active" aria-current="page" >ALL</routerLink>
+ </li>
+ <li class="nav-item">
+   <routerLink to="/ArtView" class="nav-link" style="text-decoration: underline">ART</routerLink>
+ </li>
+ <li class="nav-item">
+   <routerLink to="/GameView" class="nav-link" >GAME</routerLink>
+ </li>
+ <li class="nav-item">
+   <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
+ </li>
+</ul>
     <br>
     <h1 style="color: #f39f5a">Art</h1>
     <br>
