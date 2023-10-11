@@ -45,9 +45,9 @@
 
 <style lang="scss" scoped>
 .navbar {
-  background-color: #1d1a39;
+  background-color: #F26C6C;
   color: #fff;
-  box-shadow: 0px 15px 25px #060303;; 
+  box-shadow: 0px 15px 25px #F26C6C;; 
 }
 
 .navbar-brand {
@@ -87,7 +87,7 @@
 
 .nav-item {
   margin-right: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 .navbar-toggler {
@@ -99,8 +99,8 @@
 }
 
 .form-control {
-  background-color: #1d1a39; 
-  color: #333;
+  background-color: #F26C6C; 
+  color: #F26C6C;
 }
 
 
