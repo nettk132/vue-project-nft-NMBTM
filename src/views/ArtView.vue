@@ -1,18 +1,18 @@
 <template>
   <br>
   <ul class="nav mx-5 w-50">
- <li class="nav-item">
+ <h2 class="nav-item">
    <routerLink to="/" class="nav-link active" aria-current="page" >ALL</routerLink>
- </li>
- <li class="nav-item">
+ </h2>
+ <h2 class="nav-item">
    <routerLink to="/ArtView" class="nav-link" style="text-decoration: underline">ART</routerLink>
- </li>
- <li class="nav-item">
+ </h2>
+ <h2 class="nav-item">
    <routerLink to="/GameView" class="nav-link" >GAME</routerLink>
- </li>
- <li class="nav-item">
+ </h2>
+ <h2 class="nav-item">
    <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
- </li>
+ </h2>
 </ul>
     <br>
     <h1 style="color: #f39f5a">Art</h1>
@@ -43,6 +43,26 @@
   </script>
   
   <style lang="scss" scoped>
+
+  /* เปลี่ยนสีข้อความ ALL */
+  .nav-item:nth-child(1) .nav-link {
+    color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
+  }
+
+  /* เปลี่ยนสีข้อความ ART */
+  .nav-item:nth-child(2) .nav-link {
+    color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
+  }
+
+  /* เปลี่ยนสีข้อความ GAME */
+  .nav-item:nth-child(3) .nav-link {
+    color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
+  }
+
+  /* เปลี่ยนสีข้อความ PHOTOGRAPHY */
+  .nav-item:nth-child(4) .nav-link {
+    color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
+  }
   .card-group {
   display: flex;
   flex-wrap: wrap;
