@@ -64,13 +64,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <p>name: {{name}}</p>
-                <p>phone: {{phone}}</p>
-                <p>province: {{province}}</p>
-                <p>district: {{district }}</p>
-                <p>postalCode: {{postalCode}}</p>
-                <p>email: {{email}}</p>
-                <p>moreDetail: {{moreDetail}}</p>
+                
                 <div class="card-body p-4">
                     <div class="float-end">
                         <p class="mb-0 me-5 d-flex align-items-center">

@@ -14,7 +14,7 @@
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        </ul>
        <form class="d-flex w-100 mx-3">
-         <input class="form-control mx-6 w-50" type="search" placeholder="Search" aria-label="Search">
+         <input class="form-control mx-3 w-0 h-0" type="search" placeholder="Search" aria-label="Search">
          <button class="btn btn-outline-success" type="submit"> Search <i class="fas fa-search"></i></button>
          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
            <li class="nav-item">
@@ -54,7 +54,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
 }
 
 .navbar-brand {
-  font-size: 24px; 
+  font-size: 22px; 
 }
 
 .nav-link {
@@ -76,12 +76,16 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
 
 .btn-outline-success {
   border-color: #f39f5a; 
-  color: #f39f5a; 
+  color: #8a3e00; 
+  margin-left:8px;
+  width: 150px;
+  height: 50%;
 }
 
 .btn-outline-success:hover {
   background-color: #f39f5a; 
-  color: #fff; 
+  color: #fff;
+
 }
 
 .fa-cart-shopping {
@@ -89,7 +93,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-left: 1px;
   
 }
 
@@ -103,7 +107,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
 
 .form-control {
   background-color: #F26C6C; 
-  color: #F26C6C;
+  color: #ffffff;
 }
 
 .nav-item span {
@@ -113,8 +117,12 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
     padding: 1px 7px; 
     position: relative;
     font-size: 9px;
-    top: -14px; 
-    right: 5px; 
+    top: -40px; 
+    right: -18px; 
 }
 
+.form-control{
+  max-width: 150%;
+  height: 50%;
+}
 </style>

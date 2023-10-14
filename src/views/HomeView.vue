@@ -63,9 +63,10 @@
   </div>
 <br>
 <div>
-    <h1 style="color: #f39f5a">
+    <h1 style="color: #8544ee">
        Trending 
     </h1>
+    <br>
    <table class="table">
   <thead>
     <tr>
@@ -84,7 +85,7 @@
 </tbody>
 </table>
 <br>
-<h1 style="color: #f39f5a">Art</h1>
+<h1 style="color: #8544ee">Art</h1>
 <br>
   </div>
   <div class="card-group">
@@ -103,7 +104,7 @@
 </div>
 
 <br>
-<h1 style="color: #f39f5a">Game</h1>
+<h1 style="color: #8544ee">Game</h1>
 <br>
 
 <div class="card-group">
@@ -122,7 +123,7 @@
 </div>
 
 <br>
-<h1 style="color: #f39f5a">Photography</h1>
+<h1 style="color: #8544ee">Photography</h1>
 <br>
 
 <div class="card-group">

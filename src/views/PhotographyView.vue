@@ -15,7 +15,7 @@
  </h2>
 </ul>
 <br>
-        <h1 style="color: #f39f5a">Photography</h1>
+        <h1 style="color: #8544ee">Photography</h1>
         <br>
       <div class="card-group">
         <div class="col mb-4 mx-2" v-for="(i, index) in list_Photography" :key="index">
