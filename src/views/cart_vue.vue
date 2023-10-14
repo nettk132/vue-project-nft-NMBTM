@@ -82,9 +82,11 @@ const confirmOrder = () => {
             </div>
             <div class="d-flex justify-content-end">
         <RouterLink to="/Login">
-        <button @click="confirmOrder" type="button" class="btn btn-success btn-lg">สั่งซื้อ</button>
+        <button @click="confirmOrder" type="button" class="btn btn-success btn-lg me-5">สั่งซื้อ</button>
     </RouterLink>
+    
     </div>
+    <br>
         </div>
 
         

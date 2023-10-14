@@ -24,7 +24,7 @@
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
-    <div id="hero-carousel" class="carousel slide" style="height: 600px; overflow: hidden;">
+    <div id="hero-carousel" class="carousel slide" >
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="https://i.pinimg.com/originals/7b/2d/d7/7b2dd78b2d4f87ce82033ad195a6c6ea.gif" class="d-block w-100 h-100" alt="Slide 1">
@@ -67,7 +67,7 @@
        Trending 
     </h1>
     <br>
-   <table class="table">
+   <table class="table table-danger">
   <thead>
     <tr>
       <th scope="col">Rank</th>
@@ -79,7 +79,7 @@
   <tbody class="table-group-divider">
   <tr v-for="(item, index) in list.slice(0, 10)" :key="index">
     <th scope="row">{{ index + 1 }}</th>
-    <td><img :src=item.image class="card-img-top mx-auto" style="width: 18.5rem; height: 18.5rem;"></td>
+    <td><img :src=item.image class="card-img-top mx-auto" style="width: 10.5rem; height: 10.5rem; "></td>
     <td>{{item.price}} บาท</td>
   </tr>
 </tbody>
@@ -171,6 +171,27 @@ import { addToCart } from '../stores/cart.js';
 
 
 <style lang="scss" scoped>
+
+
+@media (min-width: 1000px) {
+  .carousel {
+    width: 100%;
+    height: 600px;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px){
+  .carousel {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  .carousel {
+    width: 100%;
+    height: 350px;
+  }
+}
+
   /* เปลี่ยนสีข้อความ ALL */
   .nav-item:nth-child(1) .nav-link {
     color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
@@ -255,5 +276,8 @@ background-color: #0c7075;
 .container {
 padding: 20px;
 }
+
+
+
 
 </style>

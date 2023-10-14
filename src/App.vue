@@ -4,10 +4,13 @@
   <div class="container">
     <router-view />
   </div>
+  
 </div>
-<div>
+<footer>
   <Footer_homepage />
-</div>
+</footer>
+
+
 </template>
 
 <script setup>
@@ -23,4 +26,5 @@ import Footer_homepage from './components/Footer_homepage.vue';
   background: rgb(255,255,255);
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(253, 253, 253) 100%);
 }
+
 </style>

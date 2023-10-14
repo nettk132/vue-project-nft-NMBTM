@@ -14,3 +14,17 @@
 .swal-text {
     font-size: 36px; /* Adjust the font size as needed */
 }
+
+@media (max-width: 1000px) {
+    .nav {
+      flex-direction: column; /* Stack items vertically for small screens */
+    }
+
+    .nav-item {
+      margin: 10px 0; /* Add spacing between list items */
+    }
+   
+    
+  }
+
+ 

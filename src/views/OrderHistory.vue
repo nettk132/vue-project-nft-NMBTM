@@ -88,35 +88,89 @@ export default {
 
 <style scoped>
 .container_all {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  
 }
+
 h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
 }
+
 .card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .card-body {
-    padding: 20px;
+  padding: 20px;
 }
+
 .card img {
-    max-width: 100%;
-    border-radius: 5px;
+  max-width: 100%;
+  border-radius: 5px;
 }
-.input-group {
-    width: 80px;
-    margin: 0 auto;
+
+.card-body p {
+  margin: 0;
 }
-h4 {
-    font-size: 18px;
+
+.row {
+  margin-bottom: 15px;
 }
-h3 {
-    font-size: 24px;
+
+.col-md-2 img {
+  border: 1px solid #ddd;
+}
+
+.col-md-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-md-3 p {
+  margin: 5px 0;
+}
+
+.col-md-3 p.lead {
+  font-weight: bold;
+}
+
+.col-md-3 span.text-muted {
+  font-size: 12px;
+  color: #777;
+}
+
+.col-md-2 h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.float-end p {
+  display: flex;
+  align-items: center;
+}
+
+.small.text-muted {
+  font-size: 14px;
+  color: #777;
+  margin-right: 5px;
+}
+
+h3 small.text-muted {
+  font-size: 18px;
+}
+
+p.color-red {
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }
 </style>
