@@ -1,4 +1,5 @@
 <template>
+    <br>
     <div class="row mt-3">
         <div class="col-md-6">
             <img :src="Product_Game.image" alt="" class="img-fluid">
@@ -6,7 +7,10 @@
             <div class="col-md-6">
                 <h1>{{ Product_Game.title }}</h1>
                 <p>
-                   {{ Product_Game.description }}
+                   {{ Product_Game.descriptionfull }}
+                </p>
+                <p>
+                    Owned_by  {{ Product_Game.Owned_by }}
                 </p>
                 <h4>ราคา {{Product_Game.price}} บาท</h4>
             
@@ -18,7 +22,7 @@
             </div>
     </div>
     
-
+<br>
 </template>
 
 <script setup>

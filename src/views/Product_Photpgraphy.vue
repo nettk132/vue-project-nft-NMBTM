@@ -1,4 +1,5 @@
 <template>
+    <br>
     <div class="row mt-3">
         <div class="col-md-6">
             <img :src="Product_Photography.image" alt="" class="img-fluid">
@@ -6,7 +7,10 @@
             <div class="col-md-6">
                 <h1>{{ Product_Photography.title }}</h1>
                 <p>
-                   {{ Product_Photography.description }}
+                   {{ Product_Photography.descriptionfull }}
+                </p>
+                <p>
+                    Owned_by  {{ Product_Photography.Owned_by }}
                 </p>
                 <h4>ราคา {{Product_Photography.price}} บาท</h4>
             
@@ -18,7 +22,7 @@
             </div>
     </div>
     
-
+<br>
 </template>
 
 <script setup>
