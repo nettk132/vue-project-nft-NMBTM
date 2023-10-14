@@ -62,7 +62,7 @@
 
   </div>
 <br>
-  <div>
+<div>
     <h1 style="color: #f39f5a">
        Trending 
     </h1>
@@ -95,7 +95,7 @@
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
     <routerLink :to="`/Product_Vue/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-    <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
 
   </div>
 </div>
@@ -114,7 +114,7 @@
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
     <routerLink :to="`/Product_Game/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-    <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
 
   </div>
 </div>
@@ -132,9 +132,8 @@
   <div class="card-body">
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
-
     <routerLink :to="`/Product_Photpgraphy/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-    <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
 
   </div>
 </div>
@@ -162,6 +161,11 @@ import { usePhotography_listStore } from '@/stores/counter.js';
 
 const all_Photography = usePhotography_listStore();
 const list_Photography = ref(all_Photography.Photography_list);
+
+import { addToCart } from '../stores/cart.js';
+  const handleAddToCart = (item) => {
+    addToCart(item);
+};
 </script>
 
 

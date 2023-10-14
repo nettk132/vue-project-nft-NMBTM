@@ -10,7 +10,7 @@ import Product_Photpgraphy from '../views/Product_Photpgraphy.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import Userinfo from '../views/User_info.vue'
-import OrderView from '../views/OrderView.vue'
+import OrderHistory from '../views/OrderHistory.vue'
 
 
 
@@ -75,7 +75,7 @@ const router = createRouter({
     {
       path: '/OrderHistory',
       name: 'OrderHistory',
-      component: OrderView
+      component: OrderHistory
     }
   ]
 

@@ -6,19 +6,18 @@
             <div class="col-md-6">
                 <h1>{{ product.title }}</h1>
                 <p>
-                   {{ product.description }}
+                    {{ product.description }}
                 </p>
-                <h6>Owned_by {{ product.Owned_by }}</h6>
                 <h4>ราคา {{product.price}} บาท</h4>
             
             <div class="d-flex mt-3">
                 
-                <button class="btn btn-primary" >เพิ่มสินค้า</button>
+                <button  class="btn btn-primary" @click="AddToCart(product)">เพิ่มสินค้า</button>
             </div>
                 
             </div>
     </div>
-    <br>
+    
 
 </template>
 
@@ -32,12 +31,16 @@ const all_Art = useArt_listStore();
 const list = ref(all_Art.Art_list);
 
 const route = useRoute()
-
 console.log(route.params.id)
 
 const product = computed(() => {
-  return list.value.find(item => item.id === route.params.id)
+    return list.value.find(item => item.id === route.params.id)
 })
+import { addToCart } from '../stores/cart.js';
+  const AddToCart = (item) => {
+    addToCart(item);
+    console.log(item)
+  }
 </script>
 
 <style lang="scss" scoped>

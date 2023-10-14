@@ -8,12 +8,11 @@
                 <p>
                    {{ Product_Game.description }}
                 </p>
-                <h6>Owned_by {{ Product_Game.Owned_by }}</h6>
                 <h4>ราคา {{Product_Game.price}} บาท</h4>
             
             <div class="d-flex mt-3">
                 
-                <button class="btn btn-primary" >เพิ่มสินค้า</button>
+                <button class="btn btn-primary" @click="AddToCart(Product_Game)" >เพิ่มสินค้า</button>
             </div>
                 
             </div>
@@ -28,16 +27,21 @@ import { ref,computed } from 'vue';
 
 import { useGame_listStore } from '@/stores/counter.js';
 
-const all_Game = useGame_listStore();
-const list = ref(all_Game.Game_list);
+const all_game = useGame_listStore();
+const list = ref(all_game.Game_list);
 
 const route = useRoute()
 
 console.log(route.params.id)
 
 const Product_Game = computed(() => {
-  return list.value.find(item => item.id === route.params.id)
+    return list.value.find(item => item.id === route.params.id)
 })
+import { addToCart } from '../stores/cart.js';
+  const AddToCart = (item) => {
+    addToCart(item);
+    console.log(item)
+  }
 </script>
 
 <style lang="scss" scoped>

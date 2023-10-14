@@ -14,7 +14,7 @@
    <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
  </h2>
 </ul>
-  <br>
+<br>
       <h1 style="color: #f39f5a">Game</h1>
       <br>
     <div class="card-group">
@@ -25,7 +25,7 @@
              <h5 class="card-title">{{ i.title }}</h5>
              <p class="card-text">{{ i.description }}</p>
              <routerLink :to="`/Product_Game/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-            <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+            <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
           </div>
         </div>
       </div>  
@@ -39,7 +39,10 @@
   
   const all_game = useGame_listStore();
   const list_game = ref(all_game.Game_list);
-  
+  import { addToCart } from '../stores/cart.js';
+  const handleAddToCart = (item) => {
+    addToCart(item);
+};
   </script>
   
   

@@ -14,7 +14,7 @@
    <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
  </h2>
 </ul>
-    <br>
+<br>
     <h1 style="color: #f39f5a">Art</h1>
     <br>
     <div class="card-group">
@@ -25,7 +25,7 @@
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
     <routerLink :to="`/Product_Vue/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-    <button class="btn btn-success mx-2" @click="cart_store.add_cart(product.id, product.price)">เพิ่มลงตะกร้า</button>
+    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
   </div>
   </div>
   </div>  
@@ -33,13 +33,17 @@
   </template>
   
   <script setup>
-  
   import { ref } from 'vue';
   
   import { useArt_listStore } from '@/stores/counter.js';
   
   const all_Art = useArt_listStore();
   const list = ref(all_Art.Art_list);
+  
+  import { addToCart } from '../stores/cart.js';
+  const handleAddToCart = (item) => {
+    addToCart(item);
+};
   </script>
   
   <style lang="scss" scoped>

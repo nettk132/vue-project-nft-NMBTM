@@ -1,19 +1,18 @@
 <template>
     <div class="row mt-3">
         <div class="col-md-6">
-            <img :src="product_Photography.image" alt="" class="img-fluid">
+            <img :src="Product_Photography.image" alt="" class="img-fluid">
         </div>
             <div class="col-md-6">
-                <h1>{{ product_Photography.title }}</h1>
+                <h1>{{ Product_Photography.title }}</h1>
                 <p>
-                   {{ product_Photography.description }}
+                   {{ Product_Photography.description }}
                 </p>
-                <h6>Owned_by {{ product_Photography.Owned_by }}</h6>
-                <h4>ราคา {{product_Photography.price}} บาท</h4>
+                <h4>ราคา {{Product_Photography.price}} บาท</h4>
             
             <div class="d-flex mt-3">
                 
-                <button class="btn btn-primary" >เพิ่มสินค้า</button>
+                <button class="btn btn-primary" @click="AddToCart(Product_Photography)" >เพิ่มสินค้า</button>
             </div>
                 
             </div>
@@ -25,7 +24,6 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { ref,computed } from 'vue';
-
 import { usePhotography_listStore } from '@/stores/counter.js';
 
 const all_Photography = usePhotography_listStore();
@@ -35,9 +33,14 @@ const route = useRoute()
 
 console.log(route.params.id)
 
-const product_Photography = computed(() => {
-  return list.value.find(item => item.id === route.params.id)
+const Product_Photography = computed(() => {
+    return list.value.find(item => item.id === route.params.id)
 })
+import { addToCart } from '../stores/cart.js';
+  const AddToCart = (item) => {
+    addToCart(item);
+    console.log(item)
+  }
 </script>
 
 <style lang="scss" scoped>

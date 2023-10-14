@@ -96,7 +96,7 @@ export default {
             this.อำเภอ = this.อำเภอ.trim();
             this.postal_code = this.postal_code.trim();
             this.email = this.email.trim();
-            this.$router.push('/');
+            this.$router.push('/OrderHistory');
         },
     },
 };
