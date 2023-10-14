@@ -13,7 +13,7 @@ export function addToCart(item) {
             position: 'top-center',
             text: "คุณได้เพิ่มสินค้าไปแล้ว",
             icon: "error",
-            button: "ตกลง",
+            
             showConfirmButton: false,
             timer: 1500
           });
@@ -25,7 +25,7 @@ export function addToCart(item) {
             position: 'top-center',
             text: "เพิ่มสินค้าเรียบร้อยแล้ว",
             icon: "success",
-            button: "ตกลง",
+           
             showConfirmButton: false,
             timer: 1500
           });
