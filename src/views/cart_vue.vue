@@ -48,6 +48,7 @@ const confirmOrder = () => {
                                 <div class="col-md-3 col-lg-3 col-xl-3">
                                     <span>รายการ {{ index + 1 }} </span>
                                     <p class="lead fw-normal mb-2">{{ item.title }}</p>
+                                    <p style="color: #ef0b0b;">*รายการนี้สามารถซื้อได้ 1 ชิ้นเท่านั้น*</p>
                                     <p><span class="text-muted">category : {{item.category}}</span></p>
                                 </div>
                                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">

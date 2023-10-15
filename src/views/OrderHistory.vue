@@ -1,5 +1,5 @@
 <script setup>
-import { orders } from '../stores/order_cart';
+import { orders } from '../stores/order_cart.js';
 import { computed } from 'vue';
 const totalPrice = (item) => computed(() => item.quantity * item.price);
 
@@ -13,6 +13,7 @@ const totalOrderPrice = (order) => {
 </script>
 
 <script>
+
 export default {
     data() {
         return {

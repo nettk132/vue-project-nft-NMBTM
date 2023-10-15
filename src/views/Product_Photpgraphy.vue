@@ -19,7 +19,7 @@
                 
                 <button class="btn btn-primary" @click="AddToCart(Product_Photography)" >เพิ่มสินค้า</button>
             </div>
-                
+                <br>
             </div>
     </div>
 </div>
