@@ -17,7 +17,7 @@
             
             <div class="d-flex mt-3">
                 
-                <button  class="btn btn-primary" @click="AddToCart(product)">เพิ่มสินค้า</button>
+                <button  class="btn btn-primary" @click="AddToCart(product)">Buy Now!!</button>
             </div>
                 <br>
             </div>

@@ -1,6 +1,7 @@
 <script setup>
 import { orders } from '../stores/order_cart.js';
 import { computed } from 'vue';
+import { accounts} from '../stores/register.js';
 const totalPrice = (item) => computed(() => item.quantity * item.price);
 
 const totalItemsInOrder = (order) => {
@@ -10,38 +11,15 @@ const totalItemsInOrder = (order) => {
 const totalOrderPrice = (order) => {
   return order.items.reduce((accum, item) => accum + item.quantity * item.price, 0);
 };
+
+const name = accounts[0].name_
+const phone = accounts[0].phon
+const province = accounts[0].jung
+const district = accounts[0].Aum
+const postalCode = accounts[0].postal_code
+const email = accounts[0].email
+const moreDetail = accounts[0].more_detail
 </script>
-
-<script>
-
-export default {
-    data() {
-        return {
-            name: this.$route.params.name || "",
-            phone: this.$route.params.phone || "",
-            province: this.$route.params.province || "",
-            district: this.$route.params.district || "",
-            postalCode: this.$route.params.postalCode || "",
-            email: this.$route.params.email || "",
-            moreDetail: this.$route.params.moreDetail || ""
-        };
-    },
-    mounted() {
-  // เข้าถึงค่าที่ถูกส่งมาจากหน้าอื่นผ่าน $route.params
-  const name = this.$route.params.name;
-  const phone = this.$route.params.phone;
-  const province = this.$route.params.province;
-  const district = this.$route.params.district;
-  const postalCode = this.$route.params.postalCode;
-  const email = this.$route.params.email;
-  const moreDetail = this.$route.params.moreDetail;
-
-  // แสดงค่าใน console เพื่อตรวจสอบ
-  console.log(name, phone, province, district, postalCode, email, moreDetail);
-},
-}
-</script>
-
 <template>
     <br>
     <div class="container_all">
@@ -67,13 +45,13 @@ export default {
                 </div>
                 <div class="mx-4">
     <h3>Customer Information</h3>
-    <p>Name: {{ $route.query.Name_Last }}</p>
-    <p>Phone: {{ $route.query.Phone }}</p>
-    <p>provincial: {{ $route.query.จังหวัด }}</p>
-    <p>district: {{ $route.query.อำเภอ }}</p>
-    <p>Postal_code: {{ $route.query.postal_code }}</p>
-    <p>Email: {{ $route.query.email }}</p>
-    <p>detail: {{ $route.query.more_detail }}</p>
+    <p>Name: {{ name }}</p>
+    <p>Phone: {{ phone }}</p>
+    <p>provincial: {{ province }}</p>
+    <p>district: {{ district }}</p>
+    <p>Postal_code: {{ postalCode }}</p>
+    <p>Email: {{ email }}</p>
+    <p>detail: {{ moreDetail }}</p>
   </div>
                 <div class="card-body p-4">
                     <div class="float-end">

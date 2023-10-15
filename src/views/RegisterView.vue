@@ -5,6 +5,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4">Register</h2>
+                        <form @submit.prevent="submitre" @keydown.enter.prevent="">
                         <div class="mb-4 text-center">
                             <div class="d-flex justify-content-center">
                                 <div class="registration-option" :class="{ 'selected': registrationType === 'email' }"
@@ -60,7 +61,7 @@
                                 {{ passwordsMatch ? 'Password match' : 'Passwords do not match' }}
                             </div>
                         </div>
-                        <button @click="Register" class="btn btn-primary w-100 mt-4">Register</button>
+                            <button @click="Register" class="btn btn-primary w-100 mt-4">Register</button>
                         <p class="text-center mt-3" style="margin-bottom: 40px">Sign in with </p>
                         <div class="d-flex justify-content-center mt-2">
                             <i class="fa-brands fa-facebook fa-2xl" alt="Facebook"></i>
@@ -68,6 +69,7 @@
                             <i class="fa-brands fa-google-plus fa-2xl" alt="Google"></i>
                         </div>
                         <br><br>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -75,7 +77,36 @@
     </div>
     <br>
 </template>
-  
+
+<script setup>
+import { ref } from 'vue'
+import { useri } from '../stores/lonin.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const username = ref('');
+const password = ref('');
+const confirmPassword = ref('');
+const submitre = () => {
+    if (
+        username.value &&
+        password.value &&
+        confirmPassword.value
+    ){
+        const Newuse = {
+            username_: username.value,
+            password_: password.value,
+        }
+
+        if(password.value === confirmPassword.value
+        ){
+            useri[0]=(Newuse);
+            router.push("/Userinfo");
+        }
+    }
+}
+</script>
 <script>
 export default {
     data() {

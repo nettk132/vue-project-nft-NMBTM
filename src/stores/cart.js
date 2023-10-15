@@ -2,6 +2,7 @@ import { ref } from 'vue';
 
 import swal from 'sweetalert';
 
+
 export const cart = ref([]);
 
 export function addToCart(item) {
@@ -36,4 +37,3 @@ export function addToCart(item) {
 export function totalItemsInCart() {
     return cart.value.reduce((acc, item) => acc + item.quantity, 0);
 }
-

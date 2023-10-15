@@ -23,13 +23,13 @@
                             <h6>ADDRESS</h6>
                             <div class="input-group">
                                 <div class="underlined-input-container">
-                                    <input id="จังหวัด" v-model="จังหวัด" class="underlined-input"
+                                    <input id="จังหวัด" v-model="jung" class="underlined-input"
                                         placeholder="จังหวัด" />
                                 </div>
                             </div>
                             <div class="input-group">
                                 <div class="underlined-input-container">
-                                    <input id="อำเภอ" v-model="อำเภอ" class="underlined-input" placeholder="อำเภอ" />
+                                    <input id="อำเภอ" v-model="Aum" class="underlined-input" placeholder="อำเภอ" />
                                 </div>
                             </div>
                             <div class="input-group">
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary w-100" :v-model="isSubmitDisabled">ยืนยันข้อมูล</button>
+                                <button type="submit" class="btn btn-primary w-100" :v-model="isSubmitDisabled">ยืนยันข้อมูล</button>
                         <br><br><br>
                     </form>
                 </div>
@@ -64,55 +64,64 @@
 
 <script setup>
 import { ref } from 'vue'
+import { accounts } from '../stores/register.js'
 import { useRouter } from 'vue-router'
-
-const Name_Last = ref('')
-const Phone = ref('')
-const จังหวัด = ref('')
-const อำเภอ = ref('')
-const postal_code = ref('')
-const email = ref('')
-const more_detail = ref('')
-
-// สร้าง ref สำหรับตรวจสอบความถูกต้องของข้อมูล
-const isSubmitDisabled = ref(true)
 
 const router = useRouter()
 
+const Name_Last = ref('');
+const Phone = ref('');
+const jung = ref('');
+const Aum = ref('');
+const postal_code = ref('');
+const email = ref('');
+const more_detail = ref('');
 const submitForm = () => {
-  // ส่งข้อมูล input ไปยังหน้า OrderHistory โดยใช้ query parameters
-  router.push({
-    name: 'OrderHistory',
-    query: {
-      Name_Last: Name_Last.value,
-      Phone: Phone.value,
-      จังหวัด: จังหวัด.value,
-      อำเภอ: อำเภอ.value,
-      postal_code: postal_code.value,
-      email: email.value,
-      more_detail: more_detail.value,
-    },
-  })
+    if (
+        Name_Last.value &&
+        Phone.value &&
+        jung.value &&
+        Aum.value &&
+        postal_code.value &&
+        email.value &&
+        more_detail.value
+    ) {
+        const Newaccount = {
+            name_: Name_Last.value,
+            phon: Phone.value,
+            jung: jung.value,
+            Aum: Aum.value,
+            postal_code: postal_code.value,
+            email: email.value,
+            more_detail: more_detail.value
+        }
+
+        // แสดงค่า Newaccount พร้อมกับค่าอื่น ๆ ในคอนโซลบราวเซอร์
+        console.log("Newaccount:", Newaccount);
+        console.log("Name_Last.value:", Name_Last.value);
+        console.log("Phone.value:", Phone.value);
+        console.log("jung.value:", jung.value);
+        console.log("Aum.value:", Aum.value);
+        console.log("postal_code.value:", postal_code.value);
+        console.log("email.value:", email.value);
+        console.log("more_detail.value:", more_detail.value);
+        console.log(accounts);
+
+        accounts[0]=(Newaccount);
+        Name_Last.value = '';
+        Phone.value = '';
+        jung.value = '';
+        Aum.value = '';
+        postal_code.value = '';
+        email.value = '';
+        more_detail.value = '';
+        router.push("/");
+    }
 }
 
-// สร้างฟังก์ชันเพื่อตรวจสอบความถูกต้องของข้อมูล
-const validateForm = () => {
-  isSubmitDisabled.value = !(
-    Name_Last.value &&
-    Phone.value &&
-    จังหวัด.value &&
-    อำเภอ.value &&
-    postal_code.value &&
-    email.value
-  )
-}
-
-// เรียก validateForm เมื่อมีการเปลี่ยนแปลงในข้อมูล
-validateForm()
-
+const isSubmitDisabled = ref(true)
 
 </script>
-
 <style scoped>
 .input-group {
     position: relative;

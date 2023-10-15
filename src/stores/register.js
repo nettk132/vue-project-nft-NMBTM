@@ -1,5 +1,1 @@
-export default {
-    props: {
-      userDataList: Array, // รับข้อมูลผู้ใช้ผ่าน props
-    },
-  };
+export const accounts = [{ name_: 'a', phon: 's', jung: 'd', Aum: 'f', postal_code: 'g', email: 'h', more_detail: 'j' }];

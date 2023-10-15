@@ -1,21 +1,16 @@
 <template>
   <br>
+  <div class="box" style="background-color: #e8bcb9; padding: 20px; border: 1px solid #e8bcb9; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
   <ul class="nav mx-5 w-50">
- <h2 class="nav-item">
-   <routerLink to="/" class="nav-link active" aria-current="page" >ALL</routerLink>
- </h2>
- <h2 class="nav-item">
-   <routerLink to="/ArtView" class="nav-link" style="text-decoration: underline">ART</routerLink>
- </h2>
- <h2 class="nav-item">
-   <routerLink to="/GameView" class="nav-link" >GAME</routerLink>
- </h2>
- <h2 class="nav-item">
-   <routerLink to="/PhotographyView" class="nav-link ">PHOTOGRAPHY</routerLink>
- </h2>
+  <li class="nav-item"><router-link to="/" class="nav-link" aria-current="page">ALL</router-link></li>
+  <li class="nav-item"><router-link to="/ArtView" class="nav-link active" >ART</router-link></li>
+  <li class="nav-item"><router-link to="/GameView" class="nav-link">GAME</router-link></li>
+  <li class="nav-item"><router-link to="/PhotographyView" class="nav-link">PHOTOGRAPHY</router-link></li>
 </ul>
+</div>
 <br>
-    <h1 style="color: #8544ee">Art</h1>
+<br>
+    <h1 style="color: #6b705c">Art</h1>
     <br>
     <div class="card-group">
   <div class="col mb-4 mx-2" v-for="(i, index) in list" :key="index">
@@ -25,7 +20,7 @@
     <h5 class="card-title">{{ i.title }}</h5>
     <p class="card-text">{{ i.description }}</p>
     <routerLink :to="`/Product_Vue/${i.id}`" class="btn btn-primary">รายละเอียด</routerLink>
-    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">เพิ่มลงตะกร้า</button>
+    <button class="btn btn-success mx-2" @click="handleAddToCart(i)">Buy Now!!</button>
   </div>
   </div>
   </div>  
@@ -45,10 +40,12 @@
     addToCart(item);
 };
   </script>
-  
-  <style lang="scss" scoped>
 
-  /* เปลี่ยนสีข้อความ ALL */
+
+<style lang="scss" scoped>
+   
+   
+   /* เปลี่ยนสีข้อความ ALL */
   .nav-item:nth-child(1) .nav-link {
     color: rgb(0, 0, 0); /* สีข้อความที่คุณต้องการ */
   }
@@ -84,7 +81,7 @@
   .card:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
-  box-shadow: 0px 15px 25px #1d1a39;
+  box-shadow: 0px 15px 25px #6b705c;
   ; 
   }
   
@@ -95,7 +92,7 @@
   
   .card-body {
   padding: 15px;
-  background-color:#e8bcb9;
+  background-color:#f3dbce;
   }
   
   .card-title {
@@ -132,5 +129,51 @@
   .container {
   padding: 20px;
   }
+
+  .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* รายการในแถบการนำทาง */
+.nav-item h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ปุ่ม "ALL" ที่เป็นหน้าปัจจุบัน */
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* ลิงก์ในแถบการนำทาง */
+.nav-link {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  list-style: none;
+    margin: 0 20px;
+    transition: 0.8s;
+}
+
+/* ปรับขนาดตัวอักษรเวลาเมาส์ไฟ */
+.nav-link:hover {
+  font-size: 20px;
+  transition: all 0.3s;
+  transform: scale(1.5);
+  filter: blur(0.2px);
+  
+}
   
   </style>

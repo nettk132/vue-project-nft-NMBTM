@@ -2,6 +2,9 @@
 import { cart } from '../stores/cart.js';
 import { computed } from 'vue';
 import { addOrder } from '../stores/order_cart.js';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 
 const totalPrice = (item) => computed(() => item.price * item.quantity);
@@ -23,13 +26,15 @@ const removeFromCart = (itemToRemove) => {
 };
 
 
-
 const confirmOrder = () => {
     addOrder(cart.value);
     cart.value = [];
+    router.push("/OrderHistory");
+
 };
 
 </script>
+
 <template>
     <hr>
     <section class="h-100" style="background-color: #eee;">
@@ -82,9 +87,7 @@ const confirmOrder = () => {
                 </div>
             </div>
             <div class="d-flex justify-content-end">
-        <RouterLink to="/Login">
         <button @click="confirmOrder" type="button" class="btn btn-success btn-lg me-5">สั่งซื้อ</button>
-    </RouterLink>
     
     </div>
     <br>

@@ -27,9 +27,7 @@
               <label class="form-check-label">Remember me</label>
               <router-link to="/forget-password" class="ms-auto">Forgot password?</router-link>
             </div>
-            <router-link to="/Userinfo">
             <button @click="login" class="btn btn-primary w-100 mt-4">Login</button>
-           </router-link>
             <p class="text-center mt-3" style="margin-bottom: 40px">Sign in with </p>
             <div class="d-flex justify-content-center mt-2">
               <i class="fa-brands fa-facebook fa-2xl" alt="Facebook"></i>
@@ -47,7 +45,36 @@
   </div>
   <br>
 </template>
+<script setup>
+import { ref } from 'vue'
+import { useri,chuseri } from '../stores/lonin.js'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+const username = ref('');
+const password = ref('');
+
+const login = () => {
+  if (
+        username.value &&
+        password.value 
+    ){
+        const Newuse = {
+            username_: username.value,
+            password_: password.value,
+        }
+
+        if(username.value === useri[0].username_ && password.value === useri[0].password_
+        ){
+          chuseri[0]=(Newuse);
+          
+            router.push("/cart_vue");
+        }else{
+          username.value = 'กรอกใหม่';
+        }
+    }
+  }
+</script>
 <script>
 export default {
   data() {
