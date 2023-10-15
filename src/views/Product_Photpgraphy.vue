@@ -1,7 +1,8 @@
 <template>
     <br>
+    <div class="card mb-3">
     <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-md-4 mx-4 mb-4">
             <img :src="Product_Photography.image" alt="" class="img-fluid">
         </div>
             <div class="col-md-6">
@@ -21,7 +22,7 @@
                 
             </div>
     </div>
-    
+</div>
 <br>
 </template>
 
@@ -48,5 +49,8 @@ import { addToCart } from '../stores/cart.js';
 </script>
 
 <style lang="scss" scoped>
-
+.card{
+    border-radius: 19px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+}
 </style>
