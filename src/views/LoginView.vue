@@ -70,7 +70,7 @@ const login = () => {
           
             router.push("/cart_vue");
         }else{
-          username.value = 'กรอกใหม่';
+          username.value = window.alert('กรุณากรอกข้อมูลใหม่') ;
         }
     }
   }
