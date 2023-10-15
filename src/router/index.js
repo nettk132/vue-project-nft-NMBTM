@@ -4,7 +4,7 @@ import ArtView from '../views/ArtView.vue'
 import GameView from '../views/GameView.vue'
 import PhotographyView from '../views/PhotographyView.vue'
 import Product_Vue from '../views/Product_Vue.vue'
-import cart_vue from '../views/Cart_Vue.vue'
+import Cart_View from '../views/Cart_View.vue'
 import Product_Game from '../views/Product_Game.vue'
 import Product_Photpgraphy from '../views/Product_Photpgraphy.vue'
 import LoginView from '../views/LoginView.vue'
@@ -44,7 +44,7 @@ const router = createRouter({
     {
       path: '/cart_vue',
       name: 'cart_vue',
-      component: cart_vue
+      component: Cart_View
     },
     {
       path: '/Product_Game/:id',
