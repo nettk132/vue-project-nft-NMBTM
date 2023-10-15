@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg ">
    <div class="container-fluid">
-     <routerLink to="/" class="nav-link" aria-current="page"> <img src="Big Bite Donuts.png" alt="NMBTM" width="60"
+     <routerLink to="/" class="nav-link" aria-current="page"> <img src="https://media.discordapp.net/attachments/1036083622563827742/1163012230288257024/Big_Bite_Donuts_2_1.png?ex=653e068b&is=652b918b&hm=47d0210918531cd87adabaa13079ffba03e7206cbd765e1cdbe929a32a4a5422&=&width=625&height=625" alt="NMBTM" width="60"
          height="60">
        <a class="navbar-brand" href="#">NMBTM</a>
      </routerLink>
@@ -99,7 +99,9 @@ watch(searchQuery, (newQuery) => {
   .navbar-nav .nav-link {
     padding: 10px 15px;  /* ปรับขนาดพื้นที่รอบรายการเมนู */
   }
-
+.navbar{
+  width: 100vw;
+}
 
 }
 @media screen and (min-width: 1024px) {
@@ -131,6 +133,7 @@ watch(searchQuery, (newQuery) => {
   position: sticky;
   top: 0;
   max-width:100% ;
+  width: 100vw;
 }
 
 .navbar-brand {

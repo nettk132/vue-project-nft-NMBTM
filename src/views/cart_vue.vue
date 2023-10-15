@@ -71,9 +71,9 @@ const confirmOrder = () => {
         <div class="card mb-5">
             <div class="card-body p-4">
                 <div class="float-end">
-                    <p class="mb-0 me-5 d-flex align-items-center">
+                    <h1 class="mb-0 me-5 d-flex align-items-center">
                         <h4><span class="small text-muted me-2"> รายการทั้งหมด {{ totalItemsInCart }} จำนวน </span></h4>
-                    </p>
+                    </h1>
     
                     <p class="mb-0 me-5 d-flex align-items-center">
                         <strong><h3> <span class="small text-muted me-2"> ยอดรวมทั้งหมด {{ totalCartPrice }}  บาท</span></h3></strong>

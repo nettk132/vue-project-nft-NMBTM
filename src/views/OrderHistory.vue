@@ -45,7 +45,7 @@ export default {
 <template>
     <br>
     <div class="container_all">
-        <h2>ประวัติการสั่งซื้อ</h2>
+        <h1>ประวัติการสั่งซื้อ</h1>
 
         <div v-if="orders.list.length">
             <div class="card rounded-3 mb-4" v-for="(order) in orders.list" :key="order.id">
@@ -65,21 +65,21 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div>
-    <h1>Order History</h1>
-    <p>Name_Last: {{ $route.query.Name_Last }}</p>
+                <div class="mx-4">
+    <h3>Customer Information</h3>
+    <p>Name: {{ $route.query.Name_Last }}</p>
     <p>Phone: {{ $route.query.Phone }}</p>
-    <p>จังหวัด: {{ $route.query.จังหวัด }}</p>
-    <p>อำเภอ: {{ $route.query.อำเภอ }}</p>
-    <p>postal_code: {{ $route.query.postal_code }}</p>
-    <p>email: {{ $route.query.email }}</p>
-    <p>more_detail: {{ $route.query.more_detail }}</p>
+    <p>provincial: {{ $route.query.จังหวัด }}</p>
+    <p>district: {{ $route.query.อำเภอ }}</p>
+    <p>Postal_code: {{ $route.query.postal_code }}</p>
+    <p>Email: {{ $route.query.email }}</p>
+    <p>detail: {{ $route.query.more_detail }}</p>
   </div>
                 <div class="card-body p-4">
                     <div class="float-end">
-                        <p class="mb-0 me-5 d-flex align-items-center">
+                        <h1 class="mb-0 me-5 d-flex align-items-center">
                             <h4><span class="small text-muted me-2"> รายการทั้งหมด {{ totalItemsInOrder(order) }} จำนวน </span></h4>
-                        </p>
+                        </h1>
                         <p class="mb-0 me-5 d-flex align-items-center">
                             <strong><h3><span class="small text-muted me-2"> ยอดรวมทั้งหมด {{ totalOrderPrice(order) }} บาท</span></h3></strong>
                         </p>
@@ -105,11 +105,15 @@ export default {
   
 }
 
-h2 {
+h1 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
 }
+p{
+  font-size: 18px;
+}
+
 
 .card {
   border: 1px solid #ccc;
