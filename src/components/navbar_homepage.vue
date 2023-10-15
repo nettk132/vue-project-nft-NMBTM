@@ -157,8 +157,8 @@ watch(searchQuery, (newQuery) => {
 
 .btn-outline-success {
   border-color: #ffffff; 
-  color: #0c7075; 
-  margin-left:auto;
+  color: #040505; 
+  margin-left:8px;
   width: 150px;
   height: 50%;
   margin-right: 5%;
