@@ -11,8 +11,7 @@ import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import Userinfo from '../views/User_info.vue'
 import OrderHistory from '../views/OrderHistory.vue'
-
-
+import SearchPage from '../views/SearchPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -76,9 +75,13 @@ const router = createRouter({
       path: '/OrderHistory',
       name: 'OrderHistory',
       component: OrderHistory
+    },
+    {
+      path: '/Seach',
+      name: 'SearchPage',
+      component: SearchPage
     }
   ]
-
 })
 
 export default router

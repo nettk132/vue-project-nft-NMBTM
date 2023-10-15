@@ -126,7 +126,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art11',
+    id: 'art13',
     title: 'pagoda tower',
     Owned_by: 'Jonistudio' ,
     price: 1846.00 ,
@@ -136,7 +136,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art13',
+    id: 'art14',
     title: 'heart musical',
     Owned_by: 'rogistok',
     price: 256.00,
@@ -146,7 +146,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art12',
+    id: 'art15',
     title: 'joysticks gamepad',
     Owned_by: 'cddesign.co',
     price: 300.00,
@@ -156,7 +156,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art14',
+    id: 'art16',
     title: 'Monkey',
     Owned_by: 'Max9545',
     price: 999.00,
@@ -166,7 +166,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art15',
+    id: 'art17',
     title: 'eye',
     Owned_by: 'Mari Dein',
     price: 999.00,
@@ -176,7 +176,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art16',
+    id: 'art18',
     title: 'Lofi girl illustration',
     Owned_by: 'Fortis Design',
     price: 255.40,
@@ -186,7 +186,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art17',
+    id: 'art19',
     title: 'Sunflowers',
     Owned_by: 'Ivailo Nikolov',
     price: 800.00,
@@ -196,7 +196,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art18',
+    id: 'art20',
     title: 'Ancient torii gate',
     Owned_by: 'Bankphotographer',
     price: 1234.59,
@@ -206,7 +206,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art19',
+    id: 'art21',
     title: 'van gogh',
     Owned_by: 'nattapon kanchanaket',
     price: 565.00,
@@ -216,7 +216,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art20',
+    id: 'art22',
     title: 'Chinese New Year 2023',
     Owned_by: 'extripod',
     price: 1756.70,
@@ -226,7 +226,7 @@ const Art_list  = ref([
     category: 'Art'
 },
 {
-    id: 'art21',
+    id: 'art23',
     title: 'Ultra Cat',
     Owned_by: 'Vectordidak',
     price: 215.10,
@@ -235,7 +235,7 @@ const Art_list  = ref([
     image: 'https://www.shutterstock.com/shutterstock/photos/2122284392/display_1500/stock-vector-cat-vector-illustration-superhero-cat-simple-mascot-style-2122284392.jpg'
 },
 {
-    id: 'art22',
+    id: 'art24',
     title: 'Cyber Cat',
     Owned_by: 'frozenbunn',
     price: 345.00,
@@ -714,3 +714,14 @@ export const usePhotography_listStore = defineStore('Photography_list', () => {
     return { Photography_list }
 })
 
+export const useSearchStore = defineStore('search', {
+    state: () => ({
+      searchQuery: '',
+    }),
+    actions: {
+      updateSearchQuery(query) {
+        this.searchQuery = query;
+      },
+    },
+  });
+  

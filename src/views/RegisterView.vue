@@ -26,7 +26,10 @@
                         <div class="input-group" v-if="registrationType === 'email'">
                             <label for="email" class="input-label">E-mail</label>
                             <div class="underlined-input-container">
-                                <input id="email" v-model="email" class="underlined-input" placeholder=" " />
+                                <input id="email" v-model="email" class="underlined-input" placeholder=" " @input="validateEmailInput" style="margin-bottom: -20px"/>
+                            </div>
+                            <div v-if="!isEmailValid" class="mt-2 text-danger">
+                                Incorrect E-mail input
                             </div>
                         </div>
                         <div class="input-group" v-else-if="registrationType === 'phone'">
@@ -77,15 +80,16 @@
 export default {
     data() {
         return {
-            username: "",
-            email: "",
-            phone: "",
-            password: "",
-            confirmPassword: "",
+            username: '',
+            email: '',
+            phone: '',
+            password: '',
+            confirmPassword: '',
             showPassword: false,
             showConfirmPassword: false,
-            registrationType: "email",
+            registrationType: 'email',
             passwordsMatch: false,
+            isEmailValid: true,
         };
     },
     computed: {
@@ -124,8 +128,17 @@ export default {
         checkPasswordMatch() {
             this.passwordsMatch = this.password === this.confirmPassword;
         },
+        validateEmailInput() {
+            if (this.registrationType === 'email') {
+                this.isEmailValid = this.validateEmail(this.email);
+            }
+        },
+        validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        },
         Register() {
-            if (this.username && ((this.registrationType === 'email' && this.email) || (this.registrationType === 'phone' && this.phone)) && this.passwordsMatch) {
+            if (this.username && ((this.registrationType === 'email' && this.isEmailValid) || (this.registrationType === 'phone' && this.phone)) && this.passwordsMatch) {
                 this.$router.push("/userinfo");
             }
         },
@@ -218,5 +231,9 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 .underlined-input:focus {
     border-bottom: 2px solid #007bff;
+}
+
+.input-group label[for="password"] {
+    margin-top: 10px;
 }
 </style>

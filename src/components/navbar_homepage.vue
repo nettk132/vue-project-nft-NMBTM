@@ -13,9 +13,9 @@
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        </ul>
-       <form class="d-flex w-100 mx-3">
-         <input class="form-control mx-0 w-0 h-0 mt-1" type="search" placeholder="Search" aria-label="Search">
-         <button class="btn btn-outline-success mx-2 mt-1" type="submit"> Search <i class="fas fa-search"></i></button>
+       <form class="d-flex w-100 mx-4">
+        <input v-model="searchQuery" @input="onInput" class="form-control w-75" type="search" placeholder="Search" aria-label="Search" style="color: black;">
+        <button class="btn btn-outline-success" type="submit">Search <i class="fas fa-search"></i></button>
          
        
        </form>
@@ -23,7 +23,7 @@
         <div>
        <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
           
-          <li class="nav-item mb-0">
+          <li class="nav-item mb-2 ">
             <routerLink to="/cart_vue" class="nav-link mt-3 " aria-current="page">
               <i class="fa-solid fa-cart-shopping fa-xl"></i>
               <span> {{ totalItems }} </span>
@@ -46,10 +46,31 @@
 
 
 <script setup>
-import {  computed } from 'vue';
+import { ref, watch, computed } from 'vue';
 import { cart } from '../stores/cart.js';
-const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.quantity, 0));
+import { useSearchStore } from '@/stores/counter.js';
+import { useRouter } from 'vue-router';
 
+const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.quantity, 0));
+const searchStore = useSearchStore();
+const searchQuery = ref('');
+const router = useRouter();
+
+watch(() => searchStore.searchQuery, (newQuery) => {
+  searchQuery.value = newQuery || '';
+});
+
+const redirectToSearchPage = (query) => {
+  if (query.trim() !== '') {
+    searchStore.updateSearchQuery(query); // Update the search query in the store
+    router.push({ name: 'SearchPage', query: { q: query } });
+  }
+};
+
+watch(searchQuery, (newQuery) => {
+  // Redirect to search page when the user types in the search bar
+  redirectToSearchPage(newQuery);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +81,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
     background-color: #3b750c	;
     color: #fff; 
     border-radius: 50%; 
-    padding: 2px 6px; 
+    padding: 1px 7px; 
     position: relative;
     font-size: 9px;
     top: -15px; 
@@ -87,7 +108,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
      background-color: #3b750c	;
      color: #fff; 
      border-radius: 50%; 
-     padding: 4px 7px; 
+     padding: 1px 7px; 
      position: relative;
      font-size: 9px;
      top: -40px; 
