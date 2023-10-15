@@ -51,8 +51,7 @@
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary w-100"
-                            :disabled="isSubmitDisabled">ยืนยันข้อมูล</button>
+                            <button type="submit" class="btn btn-primary w-100" :v-model="isSubmitDisabled">ยืนยันข้อมูล</button>
                         <br><br><br>
                     </form>
                 </div>
@@ -63,43 +62,55 @@
 <br>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            Name_Last: "",
-            Phone: "",
-            จังหวัด: "",
-            อำเภอ: "",
-            postal_code: "",
-            email: "",
-            more_detail: "",
-        };
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const Name_Last = ref('')
+const Phone = ref('')
+const จังหวัด = ref('')
+const อำเภอ = ref('')
+const postal_code = ref('')
+const email = ref('')
+const more_detail = ref('')
+
+// สร้าง ref สำหรับตรวจสอบความถูกต้องของข้อมูล
+const isSubmitDisabled = ref(true)
+
+const router = useRouter()
+
+const submitForm = () => {
+  // ส่งข้อมูล input ไปยังหน้า OrderHistory โดยใช้ query parameters
+  router.push({
+    name: 'OrderHistory',
+    query: {
+      Name_Last: Name_Last.value,
+      Phone: Phone.value,
+      จังหวัด: จังหวัด.value,
+      อำเภอ: อำเภอ.value,
+      postal_code: postal_code.value,
+      email: email.value,
+      more_detail: more_detail.value,
     },
-    computed: {
-        isSubmitDisabled() {
-            return !(
-                this.Name_Last.trim() &&
-                this.Phone.trim() &&
-                this.จังหวัด.trim() &&
-                this.อำเภอ.trim() &&
-                this.postal_code.trim() &&
-                this.email.trim()
-            );
-        },
-    },
-    methods: {
-        submitForm() {
-            this.Name_Last = this.Name_Last.trim();
-            this.Phone = this.Phone.trim();
-            this.จังหวัด = this.จังหวัด.trim();
-            this.อำเภอ = this.อำเภอ.trim();
-            this.postal_code = this.postal_code.trim();
-            this.email = this.email.trim();
-            this.$router.push('/OrderHistory');
-        },
-    },
-};
+  })
+}
+
+// สร้างฟังก์ชันเพื่อตรวจสอบความถูกต้องของข้อมูล
+const validateForm = () => {
+  isSubmitDisabled.value = !(
+    Name_Last.value &&
+    Phone.value &&
+    จังหวัด.value &&
+    อำเภอ.value &&
+    postal_code.value &&
+    email.value
+  )
+}
+
+// เรียก validateForm เมื่อมีการเปลี่ยนแปลงในข้อมูล
+validateForm()
+
+
 </script>
 
 <style scoped>

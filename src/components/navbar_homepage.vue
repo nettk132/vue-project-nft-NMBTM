@@ -60,7 +60,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
     background-color: #3b750c	;
     color: #fff; 
     border-radius: 50%; 
-    padding: 1px 7px; 
+    padding: 2px 6px; 
     position: relative;
     font-size: 9px;
     top: -15px; 
@@ -87,7 +87,7 @@ const totalItems = computed(() => cart.value.reduce((acc, item) => acc + item.qu
      background-color: #3b750c	;
      color: #fff; 
      border-radius: 50%; 
-     padding: 1px 7px; 
+     padding: 4px 7px; 
      position: relative;
      font-size: 9px;
      top: -40px; 

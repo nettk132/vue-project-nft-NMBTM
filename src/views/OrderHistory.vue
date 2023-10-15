@@ -65,7 +65,16 @@ export default {
                         </div>
                     </div>
                 </div>
-                
+                <div>
+    <h1>Order History</h1>
+    <p>Name_Last: {{ $route.query.Name_Last }}</p>
+    <p>Phone: {{ $route.query.Phone }}</p>
+    <p>จังหวัด: {{ $route.query.จังหวัด }}</p>
+    <p>อำเภอ: {{ $route.query.อำเภอ }}</p>
+    <p>postal_code: {{ $route.query.postal_code }}</p>
+    <p>email: {{ $route.query.email }}</p>
+    <p>more_detail: {{ $route.query.more_detail }}</p>
+  </div>
                 <div class="card-body p-4">
                     <div class="float-end">
                         <p class="mb-0 me-5 d-flex align-items-center">
