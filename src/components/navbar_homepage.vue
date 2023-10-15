@@ -130,6 +130,7 @@ watch(searchQuery, (newQuery) => {
   z-index: 999;
   position: sticky;
   top: 0;
+  max-width:100% ;
 }
 
 .navbar-brand {
@@ -151,22 +152,23 @@ watch(searchQuery, (newQuery) => {
 .form-control {
   background-color: #f0f0f0; 
   color: #333; 
+  
 }
 
 .btn-outline-success {
   border-color: #ffffff; 
   color: #0c7075; 
-  margin-left:8px;
+  margin-left:auto;
   width: 150px;
   height: 50%;
+  margin-right: 5%;
+  
 }
 
 .btn-outline-success:hover {
   border-color: #dc1b1b; 
   background-color: #0c7075;
   color: #fff;
-  margin-top:  10px;
-
 
 }
 
@@ -175,7 +177,7 @@ watch(searchQuery, (newQuery) => {
 }
 
 .nav-item {
-  margin-left: 1px;
+  margin-left: 0px;
   
 }
 
@@ -190,13 +192,12 @@ watch(searchQuery, (newQuery) => {
 .form-control {
   background-color: #C60C30; 
   color: #ffffff;
-}
-
-
-
-.form-control{
-  max-width: 150%;
+  max-width: 200%;
   height: 50%;
-  
+  margin-left: auto;
 }
+
+
+
+
 </style>
